@@ -1,12 +1,9 @@
 package com.stratio;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
+import com.stratio.helpers.Attach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import com.stratio.helpers.Attach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
@@ -30,11 +27,6 @@ public class TestBase {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
-    }
-
-    @BeforeEach
-    void addListener() {
-        SelenideLogger.addListener("allureSelenide", new AllureSelenide());
     }
 
     @AfterEach

@@ -1,28 +1,17 @@
 package com.stratio;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class Simple_tests extends TestBase {
 
     private static final String HOME_TITLE = "Augmented Data Fabric";
     private static final String PRODUCT_TITLE = "One single product for automated AI Data management";
-
-
-//    @BeforeAll
-//    static void configure() {
-//        WebDriverManager.chromedriver().setup();
-//        step("Opening the main page", () -> {
-//            open("https://www.stratio.com/home");
-//        });
-//    }
 
     @Test
     @Tag("simple")
