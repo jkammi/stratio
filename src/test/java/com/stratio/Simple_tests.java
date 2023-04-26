@@ -1,5 +1,6 @@
 package com.stratio;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -15,6 +16,7 @@ public class Simple_tests extends TestBase {
 
     @Test
     @Tag("simple")
+    @DisplayName("The title on a /home page is correct")
     void simpleTest() {
         step("Opening the main page", () -> {
             open("https://www.stratio.com/home");
@@ -31,6 +33,7 @@ public class Simple_tests extends TestBase {
 
     @Test
     @Tag("simple")
+    @DisplayName("The title on a /product page is correct")
     void simpleTest2() {
         step("Opening the main page", () -> {
             open("https://www.stratio.com/home");
