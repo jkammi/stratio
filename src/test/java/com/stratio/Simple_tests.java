@@ -10,28 +10,30 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class Simple_tests {
+public class Simple_tests extends TestBase {
 
     private static final String HOME_TITLE = "Augmented Data Fabric";
     private static final String PRODUCT_TITLE = "One single product for automated AI Data management";
 
 
-    @BeforeEach
-    static void configure() {
-        WebDriverManager.chromedriver().setup();
-        step("Opening the main page", () -> {
-            open("https://www.stratio.com/home");
-        });
-    }
+//    @BeforeAll
+//    static void configure() {
+//        WebDriverManager.chromedriver().setup();
+//        step("Opening the main page", () -> {
+//            open("https://www.stratio.com/home");
+//        });
+//    }
 
     @Test
     @Tag("simple")
     void simpleTest() {
+        step("Opening the main page", () -> {
+            open("https://www.stratio.com/home");
+        });
+
         step("Declining cookies", () -> {
             $("button.clear-plus").click(); // decline cookies
         });
-
-        sleep(10000);
 
         step("Checking if this text exists:" + HOME_TITLE, () -> {
             $("#section-augmented-data-centric").shouldHave(text(HOME_TITLE));
@@ -41,6 +43,10 @@ public class Simple_tests {
     @Test
     @Tag("simple")
     void simpleTest2() {
+        step("Opening the main page", () -> {
+            open("https://www.stratio.com/home");
+        });
+
         step("Click on the button Know More", () -> {
             $("button.custom-button").hover().click();
         });
