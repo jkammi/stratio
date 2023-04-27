@@ -45,8 +45,8 @@ task simple_test(type: Test) {
     }
 }
 
-task serious_test(type: Test) {
+task parametrized_test(type: Test) {
     useJUnitPlatform {
-        includeTags("serious")
+        includeTags("parametrized")
     }
 }
