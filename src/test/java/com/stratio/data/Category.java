@@ -1,5 +1,5 @@
 package com.stratio.data;
 
-public enum Categories {
+public enum Category {
     Blog, Events, News
 }

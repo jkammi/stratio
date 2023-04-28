@@ -13,15 +13,19 @@ public class TestBase {
 
     @BeforeAll
     static void configure() {
+
+//        WebDriverManager.chromedriver().setup();
+
         // parametrized values:
         String remoteBrowserName = System.getProperty("remote_browser", "selenoid.autotests.cloud");
-//        WebDriverManager.chromedriver().setup();
         String browserName = System.getProperty("browser_name", "chrome");
         String browserVersion = System.getProperty("browser_version", "100.0");
 
         Configuration.remote = "https://user1:1234@" + remoteBrowserName + "/wd/hub";
         Configuration.browser = browserName;
         Configuration.browserVersion = browserVersion;
+        Configuration.browserSize = "2000x1200";
+        Configuration.pageLoadStrategy = "eager";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -39,3 +43,4 @@ public class TestBase {
         Attach.addVideo();
     }
 }
+
