@@ -4,7 +4,7 @@ public enum Tags {
     AGILE("Agile"),
     ALGORITHMS("Algorithms"),
     ANALYTICS("Analytics"),
-    ARTIFITICAL_INTELLIGENCE("Artifical Intelligence"),
+    ARTIFICIAL_INTELLIGENCE("Artificial Intelligence"),
     BIG_DATA("Big Data"),
     CLOUD("Cloud"),
     CULTURE("Culture"),
@@ -12,8 +12,8 @@ public enum Tags {
     EVENTS("events"),
     KAFKA("Kafka"),
     ML("ML"),
-    SPARK("Spark"),
-    TALENT("Talent");
+    SPARK("spark"),
+    TALENT("talent");
 
     private String displayName;
 
@@ -22,12 +22,6 @@ public enum Tags {
     }
 
     public String displayName() {
-        return displayName;
-    }
-
-    // Optionally and/or additionally, toString.
-    @Override
-    public String toString() {
         return displayName;
     }
 }

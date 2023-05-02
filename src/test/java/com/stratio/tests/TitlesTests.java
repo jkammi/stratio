@@ -1,5 +1,6 @@
-package com.stratio;
+package com.stratio.tests;
 
+import com.stratio.TestBase;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -13,7 +14,6 @@ public class TitlesTests extends TestBase {
 
     private static final String HOME_TITLE = "Augmented Data Fabric";
     private static final String PRODUCT_TITLE = "One single product for automated AI Data management";
-    String mainPage = "https://www.stratio.com/";
 
     @Test
     @Tag("simple")
