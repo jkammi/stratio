@@ -50,3 +50,9 @@ task parametrized_test(type: Test) {
         includeTags("parametrized")
     }
 }
+
+task search_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("search")
+    }
+}

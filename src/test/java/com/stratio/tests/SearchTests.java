@@ -6,6 +6,7 @@ import com.stratio.TestBase;
 import com.stratio.data.Tags;
 import org.aspectj.apache.bcel.classfile.Utility;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.openqa.selenium.By;
@@ -18,6 +19,7 @@ import static io.qameta.allure.Allure.step;
 public class SearchTests extends TestBase {
 
     @DisplayName("Correct work of the Search on the blog page")
+    @Tag("search")
     @ParameterizedTest(name = "Tag: {0}")
     @EnumSource(Tags.class)
     void SearchTest(Tags tag) {
