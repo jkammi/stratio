@@ -45,14 +45,26 @@ task simple_test(type: Test) {
     }
 }
 
-task parametrized_test(type: Test) {
+task categories_test(type: Test) {
     useJUnitPlatform {
-        includeTags("parametrized")
+        includeTags("categories")
+    }
+}
+
+task tags_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("tags")
     }
 }
 
 task search_test(type: Test) {
     useJUnitPlatform {
         includeTags("search")
+    }
+}
+
+task social_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("social_buttons")
     }
 }
