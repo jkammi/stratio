@@ -46,12 +46,11 @@ gradle clean test -Denv=local
 
 If necessary, you can override the launch options
 ```
-gradle clean test
+gradle clean ${TASK}
 -Denv=local
--Dbrowser=${BROWSER_NAME}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--DbaseUrl=${BASE_URL}
+-Dbrowser_name=${BROWSER}
+-Dbrowser_version=${BROWSERVERSION}
+-Dscreen_resolution=${BROWSER_SIZE}
 ```
 
 ### Run tests on a remote browser
@@ -61,21 +60,21 @@ gradle clean test -Denv=remote
 You can also override launch options if needed.
 
 ```
-gradle clean test -Denv=remote
--Dbrowser=${BROWSER_NAME}
--DbrowserMersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--DbaseUrl=${BASE_URL}
--DremoteUrl=${REMOTE_BROWSER_URL}
+gradle clean ${TASK}
+-Dremote_browser=${REMOTEBROWSER}
+-Dbrowser_name=${BROWSER}
+-Dbrowser_version=${BROWSERVERSION}
+-Dscreen_resolution=${BROWSER_SIZE}
+
 ```
 
 ### Build options
 
-* <code>BROWSER_NAME</code> is the browser in which the tests will be run. The default is <code>chrome</code>.
-* <code>BROWSER_VERSION</code> is the browser version in which the tests will be run. The default is <code>105.0</code>.
+* <code>TASK</code> it's the name of the task. The default is <code>test</code> to run all of them.
+* <code>REMOTEBROWSER</code> is the address of the remote server where the tests will run.
+* <code>BROWSER</code> is the browser in which the tests will be run. The default is <code>chrome</code>.
+* <code>BROWSERVERSION</code> is the browser version in which the tests will be run. The default is <code>100.00</code>.
 * <code>BROWSER_SIZE</code> is the size of the browser window in which tests will be run.
-* <code>BASE_URL</code> – Url that will open the tested application. The default is <code>1920x1080</code>.
-* <code>REMOTE_BROWSER_URL</code> is the address of the remote server where the tests will run.
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Build in Jenkins
 <p align="center">
