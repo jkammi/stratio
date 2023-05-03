@@ -28,6 +28,7 @@ public class TestBase {
         Configuration.browserVersion = browserVersion;
         Configuration.browserSize = "2000x1200";
         Configuration.pageLoadStrategy = "eager";
+        Configuration.timeout = 12000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
