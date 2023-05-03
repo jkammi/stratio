@@ -5,7 +5,8 @@
 - [Running tests](#running_woman-running-tests)
 - [Build in Jenkins](#-build-in-jenkins)
 - [Allure report example](#-allure-report-example)
-- [Telegram notifications using a bot](#-telegram-notifications-using-a-bot)
+- [Slack notifications](#-slack-notifications)
+- [Telegram notifications](#-telegram-notifications)
 - [Video of an example of running a test in Selenoid](#-video-of-an-example-of-running-a-test-in-selenoid)
 
 ## :computer: Stack of technologies
@@ -76,7 +77,7 @@ gradle clean test -Denv=remote
 * <code>BASE_URL</code> – Url that will open the tested application. The default is <code>1920x1080</code>.
 * <code>REMOTE_BROWSER_URL</code> is the address of the remote server where the tests will run.
 
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Building in Jenkins
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Build in Jenkins
 <p align="center">
 <img title="Jenkins Build" src="images/screenshots/jenkinsBuild.png">
 </p>
@@ -94,11 +95,18 @@ gradle clean test -Denv=remote
 <img title="Test Results in Alure" src="images/screenshots/allureReportTests.png">
 </p>
 
-### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications using a bot
+### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/slack_logo.png"> Slack notifications
 
 After the build is completed, a special bots created in <code>Slack</code> and <code>Telegram</code> automatically processes and sends a message with a run report.
 <p align="center">
-<img width="70%" title="Telegram Notifications" src="images/screenshots/notificationExample.png">
+<img width="70%" title="Telegram Notifications" src="images/screenshots/notificationSlackExample.png">
+</p>
+
+### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications
+
+After the build is completed, a special bots created in <code>Slack</code> and <code>Telegram</code> automatically processes and sends a message with a run report.
+<p align="center">
+<img width="70%" title="Telegram Notifications" src="images/screenshots/notificationTelegramExample.png">
 </p>
 
 ### <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"> Video of an example of running a test in Selenoid
