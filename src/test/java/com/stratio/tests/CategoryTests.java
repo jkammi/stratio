@@ -17,7 +17,7 @@ import static io.qameta.allure.Allure.step;
 
 public class CategoryTests extends TestBase {
 
-    @DisplayName("Filter by category shows only the articles with this category")
+    @DisplayName("Filter by category")
     @ParameterizedTest(name = "Category: {0}")
     @EnumSource(Category.class)
     @Tag("categories")
@@ -42,7 +42,7 @@ public class CategoryTests extends TestBase {
         });
     }
 
-    @DisplayName("Negative test: On blog.stratio.com visible only articles with this category")
+    @DisplayName("Negative test: Filter by category")
     @ParameterizedTest(name = "Category: {0}")
     @EnumSource(Category.class)
     @Tag("parametrized")

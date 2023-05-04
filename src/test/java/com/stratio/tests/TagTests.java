@@ -17,7 +17,7 @@ import static io.qameta.allure.Allure.step;
 
 public class TagTests extends TestBase {
 
-    @DisplayName("Correct work of the filter by Tags on the blog page")
+    @DisplayName("Filter by Tags on the blog page")
     @ParameterizedTest(name = "Tag: {0}")
     @EnumSource(Tags.class)
     @Tag("tags")

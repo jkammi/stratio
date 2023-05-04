@@ -14,7 +14,7 @@ import static io.qameta.allure.Allure.step;
 
 public class SocialNetworksButtonsTests extends TestBase {
 
-    @DisplayName("Links of the buttons of social network is correct")
+    @DisplayName("Links of the buttons of social network")
     @Tag("social_buttons")
     @ParameterizedTest
     @EnumSource(SocialNetworks.class)

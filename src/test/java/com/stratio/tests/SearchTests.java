@@ -24,7 +24,7 @@ import static io.qameta.allure.Allure.step;
 public class SearchTests extends TestBase {
 
     @Disabled
-    @DisplayName("Correct work of the Search on the blog page")
+    @DisplayName("Search on the blog page")
     @Tag("search")
     @ParameterizedTest(name = "Tag: {0}")
     @EnumSource(Tags.class)
