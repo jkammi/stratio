@@ -22,8 +22,8 @@
 <img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
 <img width="6%" title="GitHub" src="images/logo/GitHub.svg">
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
-<img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 <img width="6%" title="Slack" src="images/logo/slack_logo.png">
+<img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 <img width="6%" title="Slack" src="images/logo/Jira_logo.png">
 </p>
 
@@ -117,14 +117,14 @@ And also we can see from <code>Jira</code>, which tests been added to <code>Allu
 
 ### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/slack_logo.png"> Slack notifications
 
-After the build is completed, a special bots created in <code>Slack</code> and <code>Telegram</code> automatically processing and sending a messages with a run reports.
+<code>Slack</code> notification of test run
 <p align="center">
 <img width="50%" title="notification SlackExample.png" src="images/screenshots/notificationSlackExample.png">
 </p>
 
 ### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications
 
-After the build is completed, a special bots created in <code>Slack</code> and <code>Telegram</code> automatically processes and sends a message with a run report.
+<code>Telegram</code> notification of test run
 <p align="center">
 <img width="50%" title="Telegram Notifications" src="images/screenshots/notificationTelegramExample.png">
 </p>
