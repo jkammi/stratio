@@ -5,9 +5,10 @@
 - [Running tests](#running_woman-running-tests)
 - [Build in Jenkins](#-build-in-jenkins)
 - [Allure report example](#-allure-report-example)
+- [Jira Integration](#-jira-integration)
 - [Slack notifications](#-slack-notifications)
 - [Telegram notifications](#-telegram-notifications)
-- [Video of an example of running a test in Selenoid](#-video-of-an-example-of-running-a-test-in-selenoid)
+- [Video of an example of running a test in Selenoid](#-video-example-selenoid)
 
 ## :computer: Stack of technologies
 
@@ -23,19 +24,21 @@
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 <img width="6%" title="Slack" src="images/logo/slack_logo.png">
+<img width="6%" title="Slack" src="images/logo/Jira_logo.png">
 </p>
 
 Autotests are written in <code>Java</code> using <code>JUnit 5</code> and <code>Gradle</code>.
 For UI tests, the [Selenide] framework (https://selenide.org/) was used.
 Tests can be run locally or using [Selenoid](https://aerokube.com/selenoid/).
-Also implemented build in <code>Jenkins</code> with generation of Allure-report and sending notification with results to <code>Slack</code> or <code>Telegram</code> after completion of the run.
+Also implemented build in <code>Jenkins</code> with generation of Allure-report and sending notification with results to <code>Slack</code> or <code>Telegram</code> after completion of the run. All tests are linked with <code>Jira</code> issue's keys.
 
-Allure report includes:
-* test execution steps;
-* screenshot of the page in the browser at the end of the autotest;
-* Page Source;
-* browser console logs;
-* video of the autotest.
+**Allure report includes:**
+
+* Test execution steps (of automated and manual tests)
+* Screenshot of the last step
+* Page Source
+* Browser console logs
+* Video of run
 
 ## :running_woman: Running tests
 
@@ -53,7 +56,7 @@ gradle clean ${TASK}
 -Dscreen_resolution=${BROWSER_SIZE}
 ```
 
-### Run tests on a remote browser
+### Running tests on a remote browser
 ```
 gradle clean test -Denv=remote
 ```
@@ -81,7 +84,7 @@ gradle clean ${TASK}
 <img title="Jenkins Build" src="images/screenshots/jenkinsBuild.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure_Report.svg"> Allure report example
+## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure_Report.svg"> Allure reports
 ### Overview
 
 <p align="center">
@@ -94,18 +97,36 @@ gradle clean ${TASK}
 <img title="Test Results in Alure" src="images/screenshots/allureReportTests.png">
 </p>
 
+Also we can connect <code>Jenkins</code> to the commercial version of <code>Allure</code>, which provides an opportunity to add there manual tests as well as an automated ones:
+
+<p align="center">
+<img title="Test Results in Alure" src="images/screenshots/allureReportAutoTestCases.png">
+</p>
+
+<p align="center">
+<img title="Test Results in Alure" src="images/screenshots/allureReportManualTestCases.png">
+</p>
+
+## <img width="4%" style="vertical-align:middle" title="Jira Integration" src="images/logo/Jira_logo.png"> Jira Integration
+
+And also we can see from <code>Jira</code>, which tests been added to <code>Allure</code> with their statuses
+
+<p align="center">
+<img title="Allure Overview" src="images/screenshots/Jira_Integration_Example.png">
+</p>
+
 ### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/slack_logo.png"> Slack notifications
 
-After the build is completed, a special bots created in <code>Slack</code> and <code>Telegram</code> automatically processes and sends a message with a run report.
+After the build is completed, a special bots created in <code>Slack</code> and <code>Telegram</code> automatically processing and sending a messages with a run reports.
 <p align="center">
-<img width="70%" title="Telegram Notifications" src="images/screenshots/notificationSlackExample.png">
+<img width="50%" title="notification SlackExample.png" src="images/screenshots/notificationSlackExample.png">
 </p>
 
 ### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications
 
 After the build is completed, a special bots created in <code>Slack</code> and <code>Telegram</code> automatically processes and sends a message with a run report.
 <p align="center">
-<img width="70%" title="Telegram Notifications" src="images/screenshots/notificationTelegramExample.png">
+<img width="50%" title="Telegram Notifications" src="images/screenshots/notificationTelegramExample.png">
 </p>
 
 ### <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"> Video of an example of running a test in Selenoid

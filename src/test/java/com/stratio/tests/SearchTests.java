@@ -3,17 +3,13 @@ package com.stratio.tests;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.conditions.Interactable;
 import com.stratio.TestBase;
 import com.stratio.data.Tags;
-import org.aspectj.apache.bcel.classfile.Utility;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import java.util.Iterator;
 
