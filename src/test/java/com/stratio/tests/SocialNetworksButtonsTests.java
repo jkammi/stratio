@@ -24,7 +24,7 @@ public class SocialNetworksButtonsTests extends TestBase {
         });
 
         step("Checking the link of the button", () -> {
-            String buttonSelector = ".actions .social-icons .fa-" + sn.name();
+            String buttonSelector = ".actions .social-icons .fa-" + sn.name().toLowerCase();
             $(buttonSelector).shouldHave(Condition.attribute("href", sn.displayName()));
         });
     }
