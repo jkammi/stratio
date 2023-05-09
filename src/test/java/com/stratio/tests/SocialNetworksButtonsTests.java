@@ -18,7 +18,7 @@ public class SocialNetworksButtonsTests extends TestBase {
     @Tag("social_buttons")
     @ParameterizedTest
     @EnumSource(SocialNetworks.class)
-    void SocialNetworksButtons(SocialNetworks sn) {
+    void socialNetworksButtons(SocialNetworks sn) {
         step("Opening the blog page", () -> {
             open(mainPage + "blog");
         });

@@ -42,15 +42,9 @@ Also implemented build in <code>Jenkins</code> with generation of Allure-report 
 
 ## :running_woman: Running tests
 
-### Running Tests Locally
-```
-gradle clean test -Denv=local
-```
-
 If necessary, you can override the launch options
 ```
 gradle clean ${TASK}
--Denv=local
 -Dbrowser_name=${BROWSER}
 -Dbrowser_version=${BROWSERVERSION}
 -Dscreen_resolution=${BROWSER_SIZE}

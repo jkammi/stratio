@@ -1,9 +1,9 @@
 package com.stratio.data;
 
 public enum SocialNetworks {
-    twitter("https://twitter.com/StratioBD"),
-    instagram("https://www.instagram.com/we_are_stratio/"),
-    linkedin("https://www.linkedin.com/company/stratiobd");
+    TWITTER("https://twitter.com/StratioBD"),
+    INSTAGRAM("https://www.instagram.com/we_are_stratio/"),
+    LINKEDIN("https://www.linkedin.com/company/stratiobd");
 
     private String displayName;
 

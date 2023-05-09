@@ -24,7 +24,7 @@ public class SearchTests extends TestBase {
     @Tag("search")
     @ParameterizedTest(name = "Tag: {0}")
     @EnumSource(Tags.class)
-    void SearchTest(Tags tag) {
+    void searchTest(Tags tag) {
         step("Opening the blog page", () -> {
             open(mainPage + "blog");
         });
