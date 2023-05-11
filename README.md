@@ -43,18 +43,6 @@ Also implemented build in <code>Jenkins</code> with generation of Allure-report 
 ## :running_woman: Running tests
 
 If necessary, you can override the launch options
-```
-gradle clean ${TASK}
--Dbrowser_name=${BROWSER}
--Dbrowser_version=${BROWSERVERSION}
--Dscreen_resolution=${BROWSER_SIZE}
-```
-
-### Running tests on a remote browser
-```
-gradle clean test -Denv=remote
-```
-You can also override launch options if needed.
 
 ```
 gradle clean ${TASK}
